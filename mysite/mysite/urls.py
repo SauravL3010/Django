@@ -4,5 +4,6 @@ from django.conf.urls import include
 
 urlpatterns = [
     path('polls/', include('polls.urls')),
-    path('admin/', admin.site.urls),
+    path('polls/safe/', include('polls.urls')), # mysite --> urls.py --> lists the main page urls and the admin page. 
+    path('admin/', admin.site.urls)
 ]
